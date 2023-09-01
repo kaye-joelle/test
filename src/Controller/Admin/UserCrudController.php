@@ -24,7 +24,7 @@ class UserCrudController extends AbstractCrudController
             ->setEntityLabelInPlural('Utilisateurs')
             ->setEntityLabelInSingular('Utilisateur')
 
-            ->setPageTitle("index", "SymRecipe - Administration des utilisateurs")
+            ->setPageTitle("index", "ArchiDesign - Administration des utilisateurs")
 
             ->setPaginatorPageSize(10);
     }

@@ -25,7 +25,7 @@ class ContactCrudController extends AbstractCrudController
             ->setEntityLabelInSingular('Demande de contact')
             ->setEntityLabelInPlural('Demandes de contact')
 
-            ->setPageTitle("index", "SymRecipe - Administration des demandes de contact")
+            ->setPageTitle("index", "ArchiDesign - Administration des demandes de contact")
 
             ->setPaginatorPageSize(20)
 
