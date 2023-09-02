@@ -1,0 +1,18 @@
+{# templates/pages/user/deleteUser.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Suppression du compte{% endblock %}
+
+{% block body %}
+    <div class="container mt-4">
+        <h1>Suppression de compte</h1>
+        <p>Êtes-vous sûr de vouloir supprimer votre compte ? Cette action est irréversible.</p>
+        
+        <form method="post" action="{{ path('user.delete') }}">
+            <button type="submit" class="btn btn-danger">Confirmer la suppression</button>
+        </form>
+        
+        <a href="{{ path('profile') }}" class="btn btn-secondary mt-2">Annuler</a>
+    </div>
+{% endblock %}

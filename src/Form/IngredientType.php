@@ -32,19 +32,19 @@ class IngredientType extends AbstractType
                     new Assert\NotBlank()
                 ]
             ])
-            ->add('price', MoneyType::class, [
-                'attr' => [
-                    'class' => 'form-control',
-                ],
-                'label' => 'Prix ',
-                'label_attr' => [
-                    'class' => 'form-label mt-4'
-                ],
-                'constraints' => [
-                    new Assert\Positive(),
-                    new Assert\LessThan(200)
-                ]
-            ])
+            // ->add('price', MoneyType::class, [
+            //     'attr' => [
+            //         'class' => 'form-control',
+            //     ],
+            //     'label' => 'Prix ',
+            //     'label_attr' => [
+            //         'class' => 'form-label mt-4'
+            //     ],
+            //     'constraints' => [
+            //         new Assert\Positive(),
+            //         new Assert\LessThan(200)
+            //     ]
+            // ])
             ->add('submit', SubmitType::class, [
                 'attr' => [
                     'class' => 'btn btn-primary mt-4'

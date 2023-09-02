@@ -49,54 +49,54 @@ class RecipeType extends AbstractType
                     new Assert\NotBlank()
                 ]
             ])
-            ->add('time', IntegerType::class, [
-                'attr' => [
-                    'class' => 'form-control',
-                    'min' => 1,
-                    'max' => 1440,
-                ],
-                'required' => false,
-                'label' => 'Temps (en minutes)',
-                'label_attr' => [
-                    'class' => 'form-label mt-4'
-                ],
-                'constraints' => [
-                    new Assert\Positive(),
-                    new Assert\LessThan(1441)
-                ]
-            ])
-            ->add('nbPeople', IntegerType::class, [
-                'attr' => [
-                    'class' => 'form-control',
-                    'min' => 1,
-                    'max' => 50
-                ],
-                'required' => false,
-                'label' => 'Nombre de personnes',
-                'label_attr' => [
-                    'class' => 'form-label mt-4'
-                ],
-                'constraints' => [
-                    new Assert\Positive(),
-                    new Assert\LessThan(51)
-                ]
-            ])
-            ->add('difficulty', RangeType::class, [
-                'attr' => [
-                    'class' => 'form-range',
-                    'min' => 1,
-                    'max' => 5
-                ],
-                'required' => false,
-                'label' => 'Difficulté',
-                'label_attr' => [
-                    'class' => 'form-label mt-4'
-                ],
-                'constraints' => [
-                    new Assert\Positive(),
-                    new Assert\LessThan(5)
-                ]
-            ])
+            // ->add('time', IntegerType::class, [
+            //     'attr' => [
+            //         'class' => 'form-control',
+            //         'min' => 1,
+            //         'max' => 1440,
+            //     ],
+            //     'required' => false,
+            //     'label' => 'Temps (en minutes)',
+            //     'label_attr' => [
+            //         'class' => 'form-label mt-4'
+            //     ],
+            //     'constraints' => [
+            //         new Assert\Positive(),
+            //         new Assert\LessThan(1441)
+            //     ]
+            // ])
+            // ->add('nbPeople', IntegerType::class, [
+            //     'attr' => [
+            //         'class' => 'form-control',
+            //         'min' => 1,
+            //         'max' => 50
+            //     ],
+            //     'required' => false,
+            //     'label' => 'Nombre de personnes',
+            //     'label_attr' => [
+            //         'class' => 'form-label mt-4'
+            //     ],
+            //     'constraints' => [
+            //         new Assert\Positive(),
+            //         new Assert\LessThan(51)
+            //     ]
+            // ])
+            // ->add('difficulty', RangeType::class, [
+            //     'attr' => [
+            //         'class' => 'form-range',
+            //         'min' => 1,
+            //         'max' => 5
+            //     ],
+            //     'required' => false,
+            //     'label' => 'Difficulté',
+            //     'label_attr' => [
+            //         'class' => 'form-label mt-4'
+            //     ],
+            //     'constraints' => [
+            //         new Assert\Positive(),
+            //         new Assert\LessThan(5)
+            //     ]
+            // ])
             ->add('description', TextareaType::class, [
                 'attr' => [
                     'class' => 'form-control',
@@ -111,20 +111,20 @@ class RecipeType extends AbstractType
                     new Assert\NotBlank()
                 ]
             ])
-            ->add('price', MoneyType::class, [
-                'attr' => [
-                    'class' => 'form-control',
-                ],
-                'required' => false,
-                'label' => 'Prix ',
-                'label_attr' => [
-                    'class' => 'form-label mt-4'
-                ],
-                'constraints' => [
-                    new Assert\Positive(),
-                    new Assert\LessThan(1001)
-                ]
-            ])
+            // ->add('price', MoneyType::class, [
+            //     'attr' => [
+            //         'class' => 'form-control',
+            //     ],
+            //     'required' => false,
+            //     'label' => 'Prix ',
+            //     'label_attr' => [
+            //         'class' => 'form-label mt-4'
+            //     ],
+            //     'constraints' => [
+            //         new Assert\Positive(),
+            //         new Assert\LessThan(1001)
+            //     ]
+            // ])
             ->add('isFavorite', CheckboxType::class, [
                 'attr' => [
                     'class' => 'form-check-input',
@@ -139,7 +139,7 @@ class RecipeType extends AbstractType
                 ]
             ])
             ->add('imageFile', VichImageType::class, [
-                'label' => 'Image de la recette',
+                'label' => 'Choisissez votre fichier',
                 'label_attr' => [
                     'class' => 'form-label mt-4'
                 ],
@@ -165,7 +165,7 @@ class RecipeType extends AbstractType
                 'attr' => [
                     'class' => 'btn btn-primary mt-4'
                 ],
-                'label' => 'Créer une recette'
+                'label' => 'Créer un fichier'
             ]);
     }
 

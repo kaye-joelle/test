@@ -68,7 +68,7 @@ class IngredientController extends AbstractController
 
             $this->addFlash(
                 'success',
-                'Votre ingrédient a été créé avec succès !'
+                'Votre fichier a été créé avec succès !'
             );
 
             return $this->redirectToRoute('ingredient.index');
@@ -105,7 +105,7 @@ class IngredientController extends AbstractController
 
             $this->addFlash(
                 'success',
-                'Votre ingrédient a été modifié avec succès !'
+                'Votre fichier a été modifié avec succès !'
             );
 
             return $this->redirectToRoute('ingredient.index');
@@ -134,7 +134,7 @@ class IngredientController extends AbstractController
 
         $this->addFlash(
             'success',
-            'Votre ingrédient a été supprimé avec succès !'
+            'Votre fichier a été supprimé avec succès !'
         );
 
         return $this->redirectToRoute('ingredient.index');

@@ -94,7 +94,7 @@ class RecipeController extends AbstractController
 
             $this->addFlash(
                 'success',
-                'Votre recette a été créé avec succès !'
+                'Votre fichier a été créé avec succès !'
             );
 
             return $this->redirectToRoute('recipe.index');
@@ -131,7 +131,7 @@ class RecipeController extends AbstractController
 
             $this->addFlash(
                 'success',
-                'Votre recette a été modifié avec succès !'
+                'Votre fichier a été modifié avec succès !'
             );
 
             return $this->redirectToRoute('recipe.index');
@@ -160,7 +160,7 @@ class RecipeController extends AbstractController
 
         $this->addFlash(
             'success',
-            'Votre recette a été supprimé avec succès !'
+            'Votre fichier a été supprimé avec succès !'
         );
 
         return $this->redirectToRoute('recipe.index');
@@ -210,7 +210,7 @@ class RecipeController extends AbstractController
 
             return $this->redirectToRoute('recipe.show', ['id' => $recipe->getId()]);
         }
-
+    
         return $this->render('pages/recipe/show.html.twig', [
             'recipe' => $recipe,
             'form' => $form->createView()

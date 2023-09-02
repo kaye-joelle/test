@@ -1,0 +1,30 @@
+{# templates/user/delete_confirm.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Confirmation de suppression du compte{% endblock %}
+
+{% block body %}
+    <h1>Confirmation de suppression du compte</h1>
+
+    <p>Êtes-vous sûr de vouloir supprimer votre compte ? Cette action est irréversible.</p>
+
+    <form method="POST" action="{{ path('user.delete.execute') }}">
+        {{ csrf_token('delete_account') }}
+
+        <div class="form-group">
+            <label for="password">Entrez votre mot de passe pour confirmer :</label>
+            <input type="password" id="password" name="password" class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-danger">Supprimer le compte</button>
+    </form>
+
+    <a href="{{ path('user.edit') }}" class="btn btn-secondary mt-2">Annuler</a>
+    
+    <a href="{{ path('user.delete.execute') }}" class="btn btn-danger mt-2"
+       onclick="return confirm('Êtes-vous sûr de vouloir supprimer votre compte ? Cette action est irréversible.');">
+        Supprimer le compte
+    </a>
+</body>
+</html>

@@ -31,7 +31,7 @@ class AppFixtures extends Fixture
         $users = [];
 
         $admin = new User();
-        $admin->setFullName('Administrateur de ArchiDesign')
+        $admin->setFullName('Administrateur de SymRecipe')
             ->setPseudo(null)
             ->SetEmail('admin@archidesign.fr')
             ->setRoles(['ROLE_USER', 'ROLE_ADMIN'])

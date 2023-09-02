@@ -5,3 +5,24 @@ controllers:
 kernel:
     resource: ../src/Kernel.php
     type: annotation
+
+# download_existing_file:
+#     path: '/download/{id}'
+#     controller: App\Controller\FileController::downloadFile
+
+# config/routes.yaml
+download_existing_file:
+    path: '/download/{id}'
+    controller: 'App\Controller\FileController::downloadFile'
+
+# config/routes.yaml
+
+user_delete_confirm:
+    path: '/utilisateur/supprimer'
+    controller: 'App\Controller\UserDeleteController::confirmDelete'
+    methods: ['GET']
+
+user_delete_execute:
+    path: '/utilisateur/supprimer/execute'
+    controller: 'App\Controller\UserDeleteController::deleteUser'
+    methods: ['POST']

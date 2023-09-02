@@ -108,4 +108,31 @@ class UserController extends AbstractController
             'form' => $form->createView()
         ]);
     }
+
+    
+    /**
+     * This controller allows a user to delete their account.
+     *
+     * @param User $user
+     * @param EntityManagerInterface $manager
+     * @return Response
+     */
+    #[Route('/utilisateur/suppression/{id}', name: 'user.delete', methods: ['GET', 'POST'])]
+    public function deleteUser(User $user, EntityManagerInterface $manager): Response
+    {
+        if ($this->isGranted('ROLE_USER') && $this->getUser() === $user) {
+            // Supprimer l'utilisateur
+            $manager->remove($user);
+            $manager->flush();
+
+            // Déconnecter l'utilisateur
+            $this->get('security.token_storage')->setToken(null);
+
+            // Rediriger vers la page d'accueil ou une autre page après la suppression du compte
+            return $this->redirectToRoute('accueil');
+        } else {
+            throw $this->createAccessDeniedException('Vous n\'avez pas le droit de supprimer ce compte.');
+        }
+    }
 }
+

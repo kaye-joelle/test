@@ -35,7 +35,7 @@ class IngredientTest extends WebTestCase
 
         $client->followRedirect();
 
-        $this->assertSelectorTextContains('div.alert-success', 'Votre ingrédient a été créé avec succès !');
+        $this->assertSelectorTextContains('div.alert-success', 'Votre fichier a été créé avec succès !');
 
         $this->assertRouteSame('ingredient.index');
     }
@@ -91,7 +91,7 @@ class IngredientTest extends WebTestCase
 
         $client->followRedirect();
 
-        $this->assertSelectorTextContains('div.alert-success', 'Votre ingrédient a été modifié avec succès !');
+        $this->assertSelectorTextContains('div.alert-success', 'Votre fichier a été modifié avec succès !');
 
         $this->assertRouteSame('ingredient.index');
     }
@@ -119,7 +119,7 @@ class IngredientTest extends WebTestCase
 
         $client->followRedirect();
 
-        $this->assertSelectorTextContains('div.alert-success', 'Votre ingrédient a été supprimé avec succès !');
+        $this->assertSelectorTextContains('div.alert-success', 'Votre fichier a été supprimé avec succès !');
 
         $this->assertRouteSame('ingredient.index');
     }

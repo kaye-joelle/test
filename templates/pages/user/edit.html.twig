@@ -1,18 +1,21 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}ArchiDesign - Modification de l'utilisateur
-{% endblock %}
+{% block title %}ArchiDesign - Modification de l'utilisateur{% endblock %}
 
 {% block body %}
-	<div class="container">
-		<h1 class="mt-4">Formulaire de modification des informations de l'utilisateur</h1>
+<div class="container">
+    <h1 class="mt-4">Formulaire de modification des informations de l'utilisateur</h1>
 
-		{% for message in app.flashes('warning') %}
-			<div class="alert alert-warning mt-4">
-				{{ message }}
-			</div>
-		{% endfor %}
+    {% for message in app.flashes('warning') %}
+    <div class="alert alert-warning mt-4">
+        {{ message }}
+    </div>
+    {% endfor %}
 
-		{{ form(form) }}
-		</div>
-	{% endblock %}
+    {{ form(form) }}
+
+    <div class="mt-4">
+        <a href="{{ path('user.delete.confirm') }}" class="btn btn-danger">Supprimer le compte</a>
+    </div>
+</div>
+{% endblock %}
