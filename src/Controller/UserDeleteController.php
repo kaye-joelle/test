@@ -13,17 +13,17 @@ use App\Entity\User;
 
 class UserDeleteController extends AbstractController
 {
-    /**
-     * @Route("/utilisateur/supprimer", name="user.delete.confirm")
-     */
+    
+    #[Route("/utilisateur/supprimer", name: "user.delete.confirm")]
+    
     public function confirmDelete()
     {
         return $this->render('user/delete_confirm.html.twig');
     }
 
-    /**
-     * @Route("/utilisateur/supprimer/execute", name="user.delete.execute", methods={"POST"})
-     */
+    
+    #[Route("/utilisateur/supprimer/execute", name: "user.delete.execute")]
+
     public function executeDelete(Request $request, EntityManagerInterface $entityManager, UserPasswordEncoderInterface $passwordEncoder)
     {
         $user = $this->getUser(); // Récupérez l'utilisateur actuellement connecté

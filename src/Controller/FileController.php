@@ -12,9 +12,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class FileController extends AbstractController
 {
-    /**
-     * @Route("/download/{id}", name="download_existing_file")
-     */
+    
+    #[Route("/download/{id}", name: "download_existing_file")]
+     
     public function downloadFile(int $id)
     {
         // Récupérez le fichier à partir de la base de données ou de votre système de stockage

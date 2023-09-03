@@ -26,3 +26,12 @@ user_delete_execute:
     path: '/utilisateur/supprimer/execute'
     controller: 'App\Controller\UserDeleteController::deleteUser'
     methods: ['POST']
+
+# admin_liste_clients:
+#     path: /admin/liste-clients
+#     controller: App\Controller\AdminController::listeClients
+
+# admin_tableau_de_bord:
+#     path: /admin/tableau-de-bord
+#     controller: App\Controller\AdminController::tableauDeBord
+
