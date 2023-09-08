@@ -35,3 +35,13 @@ user_delete_execute:
 #     path: /admin/tableau-de-bord
 #     controller: App\Controller\AdminController::tableauDeBord
 
+# doctrine:
+#     dbal:
+#         driver: 'pdo_mysql'
+#         server_version: '5.7'
+#         charset: utf8mb4
+#         default_table_options:
+#             charset: utf8mb4
+#             collate: utf8mb4_unicode_ci
+#         url: '%env(resolve:DATABASE_URL="mysql://root:@127.0.0.1:3306/projet_annuel?serverVersion=5.7")%' 
+        # Vous pouvez également spécifier directement la configuration ici

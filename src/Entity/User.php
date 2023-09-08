@@ -53,6 +53,23 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[Assert\NotNull()]
     private \DateTimeImmutable $updatedAt;
 
+    // Informations du client
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private ?string $clientFirstName;
+
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private ?string $clientAddress;
+
+    // Informations de la société
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private ?string $companyName;
+
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private ?string $companyAddress;
+
+    #[ORM\Column(type: 'string', length: 14, nullable: true)]
+    private ?string $siret;
+
     #[ORM\OneToMany(mappedBy: 'user', targetEntity: Ingredient::class, orphanRemoval: true)]
     private $ingredients;
 
